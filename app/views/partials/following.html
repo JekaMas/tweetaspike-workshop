@@ -1,0 +1,39 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="container">
+
+  <!-- Tweet input -->
+  <form class="form" name="form" novalidate ng-submit="follow(form)">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="user.email" placeholder="Enter handle" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Go">
+        </span>
+      </div>
+    </div>
+  </form>
+  <div class="form-group text-center">
+    <h4 class="help-block">{{ message }}</h4>
+  </div>
+  <p></p>
+
+  <h3 ng-show="myFollowingList.length">I'm following</h3>
+
+  <div>
+    <accordion close-others="oneAtATime">
+      <accordion-group ng-repeat="myFollowee in myFollowingList track by $index" is-open="status.open" ng-click="retrieveFolloweeTweets($index)">
+          <accordion-heading>
+            {{myFollowee.handle}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+          </accordion-heading>
+          <p ng-repeat="tweets in myFollowee.tweets track by $index">
+            <span>{{tweets.tweet}}</span>
+            <span class="pull-right text-muted">{{tweets.ts | amCalendar}}</span>
+          </p>
+          <p class="pull-right"><button class="btn btn-danger" ng-click="unfollowConfirmation($index)" aria-label="Remove">Unfollow</button></p>
+      </accordion-group>
+    </accordion>
+    <h4 class="text-muted text-center" ng-show="!myFollowingList.length">You are not following anyone yet! When you start following someone you will see their tweetaspikes and also get alerts!:)</h4>
+  </div>
+
+</div>

@@ -1,0 +1,152 @@
+/* line 3, ../../app/styles/app.scss */
+.input-group-addon, .input-group-btn {
+  vertical-align: top;
+}
+
+/* line 7, ../../app/styles/app.scss */
+.jumbotron {
+  background-color: #c31618;
+  color: #ffffff;
+}
+
+/* line 12, ../../app/styles/app.scss */
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li > a:hover, .nav-pills > li.active > a:focus {
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom: 4px solid red;
+}
+
+/* line 18, ../../app/styles/app.scss */
+.nav-pills > li > a {
+  border-radius: 0px;
+}
+
+/* line 22, ../../app/styles/app.scss */
+.main-content {
+  min-height: 650px;
+}
+
+/* line 26, ../../app/styles/app.scss */
+.text-aerospike {
+  color: #c31618;
+}
+
+/* line 30, ../../app/styles/app.scss */
+.onoffswitch {
+  position: relative;
+  width: 120px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: -5% 0 0 80%;
+}
+
+/* line 36, ../../app/styles/app.scss */
+.onoffswitch-checkbox {
+  display: none;
+}
+
+/* line 40, ../../app/styles/app.scss */
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 30px;
+}
+
+/* line 45, ../../app/styles/app.scss */
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+/* line 51, ../../app/styles/app.scss */
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 21px;
+  padding: 0;
+  line-height: 21px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 57, ../../app/styles/app.scss */
+.onoffswitch-inner:before {
+  content: "Alerts - ON";
+  padding-left: 10px;
+  background-color: #ff4136;
+  color: #FFFFFF;
+}
+
+/* line 63, ../../app/styles/app.scss */
+.onoffswitch-inner:after {
+  content: "Alerts - OFF";
+  padding-right: 10px;
+  background-color: #FFFFFF;
+  color: #000000;
+  text-align: right;
+}
+
+/* line 70, ../../app/styles/app.scss */
+.onoffswitch-switch {
+  display: block;
+  width: 29px;
+  background: #FFFFFF;
+  border: 2px solid #999999;
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 95px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* line 79, ../../app/styles/app.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+/* line 83, ../../app/styles/app.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+/* line 87, ../../app/styles/app.scss */
+.admin-panel {
+  padding-top: 20px;
+}
+/* line 89, ../../app/styles/app.scss */
+.admin-panel .admin {
+  font-size: 60px;
+  color: #c31618;
+  text-shadow: -3px -1px 1px rgba(0, 0, 0, 0.35);
+}
+
+/* line 96, ../../app/styles/app.scss */
+.count-header {
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  padding: 15px 0px 15px 0px;
+  font-size: 80px;
+  color: #60E300;
+}
+/* line 102, ../../app/styles/app.scss */
+.count-header span {
+  display: inline-block;
+  min-width: 100px;
+}

@@ -1,0 +1,23 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="container">
+
+  <h3 ng-show="myFollowersList.length">My Followers</h3>
+
+  <div ng-model="myFollowersList">
+	  <accordion close-others="oneAtATime">
+			<accordion-group ng-repeat="myFollower in myFollowersList track by $index" is-open="status.open" ng-click="retrieveFollowerTweets($index)">
+					<accordion-heading>
+						{{myFollower.handle}} <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+				  </accordion-heading>
+			    <p ng-repeat="tweets in myFollower.tweets track by $index">
+			    	<span>{{tweets.tweet}}</span>
+			    	<span class="pull-right">{{tweets.ts | amCalendar}}</span>
+			    </p>
+          <p class="pull-right text-muted" ng-bind-html="myFollower.handle | followFollowing:myFollowingList"></p>
+			</accordion-group>
+		</accordion>
+    <h4 class="text-muted text-center" ng-show="!myFollowersList.length">You don't have any followers yet! Don't worry though, all you have to do is start <a href='/following'>following</a> someone and they'll likely follow you!:)</h4>
+  </div>
+
+</div>
