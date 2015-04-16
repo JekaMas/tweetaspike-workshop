@@ -29,9 +29,7 @@ This application is built using -- Aerospike + Express + Angular + Node -- ASEAN
   * <a href='http://socket.io/' target='_blank'>Socket.io</a>
   * <a href='http://angular-ui.github.io/bootstrap/' target='_blank'>Angular UI</a>
 
-## Get Up and Running
-
-### Compatibility
+## Compatibility
 
 - OS:
     * CentOS/RHEL 6.x, Debian 6+, Ubuntu 12.04, Ubuntu 14.04, Mac OS X (**IMP**: Aerospike Node.js Client currently does not have support for Windows)
@@ -40,7 +38,7 @@ This application is built using -- Aerospike + Express + Angular + Node -- ASEAN
     * Xcode 5 or greater
     * Xcode Dev Tools
 
-### Prerequisites
+## Prerequisites
 
 - Aerospike Server – To install the latest version, [click here](http://www.aerospike.com/download/server/latest). The server should be running and accessible from this app.
 - Node.js – To install latest stable version, [click here](http://nodejs.org)
@@ -56,30 +54,6 @@ Even though this is a pretty lightweight application, I’ve used different tech
  * Express
  * Socket.io
  * Angular UI
-
-### Usage
-
-#### Build
-
-To build the application and resolve dependencies, run command **sudo npm update** from the application root folder.
-
-#### Config
-
-In [aerospike_config.js](https://github.com/aerospike/tweetaspike/blob/master/lib/controllers/aerospike_config.js), update **aerospikeCluster** and **aerospikeClusterPort** such that it points to your instance running Aerospike Server.
-
-#### Run
-
-To run the application, run command **node server** from the application root folder.
-
-You should see message **Connection to Aerospike cluster succeeded!**
-
-If you see *Connection to Aerospike cluster failed!*, please make sure your instance of Aerospike Server is running and available. Also confirm that **aerospikeCluster** and **aerospikeClusterPort** are set correctly as described above in the Config section.
-
-If all is well, open web browser and point it to: [http://localhost:9000](http://localhost:9000) 
-
-#### Updating Styles
-
-In a different terminal window, browse to the application root folder. Then run command **grunt** &mdash; and keep it running while you are updating [app.scss](https://github.com/aerospike/tweetaspike/blob/master/app/styles/app.scss) or [main.scss](https://github.com/aerospike/tweetaspike/blob/master/app/styles/app.scss). This will compile your updates in .scss files and generate respective .css files in real-time.
 
 ## Additional Information
 
@@ -247,5 +221,6 @@ Note: The empty tweets array gets populated on-demand in the client when user cl
 #### Logout
 *    Clears out auth stored in HTML5 Web/Local Storage and routes the user back to Login
 
+## Usage
 
-
+You will need access to the hands-on lab exercises to make it work.
