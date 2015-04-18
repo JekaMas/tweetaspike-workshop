@@ -27,13 +27,9 @@ require('./lib/routes')(app);
 io.on('connection', function(socket) {
   console.log('a client connected');
 
-	socket.on('tweet', function (data) {
-	  // console.log("new tweet: " + JSON.stringify(data));
+  // Lab 3:TODO 1: Setup Server “tweet” Event Listener
 
-	  //use io.sockets.emit to send a message to all clients with the message category of 'broadcast' - 
-	  //which is our key to know on the client-side that a new message is being broadcasted
-	  io.sockets.emit('broadcast', data);
-	});
+  // Lab 3:TODO 2: Emit Server “broadcast” Event
 });
 
 // Start server

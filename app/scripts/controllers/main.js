@@ -68,10 +68,12 @@ angular.module('tweetabaseApp')
         // console.log('/api/updateTweets response: ' + JSON.stringify(response));
 				$scope.myTweet = '';
       });
-      //this delegates to the Socket.IO client API emit method and sends the tweet
-      //see server.js for the listener
-      socket.emit('tweet',{uid: uid, tweet: tweetObject.tweet, realTweet: true});
+
+		  // Lab 3:TODO 3: Emit Client "tweet" Event
+
 		};
+
+	  // Lab 3:TODO 4: Setup Client “broadcast” Event Listener 
 
 		$scope.deleteTweet = function (index) {
 			var tweetKey = $scope.myTweets[index].key;
@@ -80,15 +82,6 @@ angular.module('tweetabaseApp')
         // console.log('/api/deleteTweet response: ' + JSON.stringify(response));
       });
 		};
-
-		//NOTE: Displaying new tweet by 'prepending' it to existing tweets on the page
-		$scope.$on('socket:broadcast', function (event,data) {
-			// console.log(event.name);
-			if ((data.realTweet || $scope.alertStatus) && $scope.uid != data.uid)	{
-				var tweetObject = {key: data.uid+':'+($scope.myFollowingTweets.length+1),tweet: data.tweet, ts: (new Date).getTime(), uid: data.uid};
-				$scope.myFollowingTweets.unshift(tweetObject);
-			}
-		});
 
 		// auto-tweet every n seconds on behalf of the users the current user is following
 		$scope.init = function() {
