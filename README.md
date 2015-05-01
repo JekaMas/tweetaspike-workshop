@@ -55,6 +55,10 @@ Even though this is a pretty lightweight application, I’ve used different tech
  * Socket.io
  * Angular UI
 
+## Usage
+
+Follow instructions in [this doc](https://github.com/aerospike-edu/tweetaspike-workshop/blob/master/Hands-On%20Lab%20Exercises.docx) and complete all exercises.
+
 ## Additional Information
 
 ### Data Models
@@ -221,6 +225,3 @@ Note: The empty tweets array gets populated on-demand in the client when user cl
 #### Logout
 *    Clears out auth stored in HTML5 Web/Local Storage and routes the user back to Login
 
-## Usage
-
-Refer to [this doc](https://github.com/aerospike-edu/tweetaspike-workshop/blob/master/Hands-On%20Lab%20Exercises.docx)
