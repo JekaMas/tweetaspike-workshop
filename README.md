@@ -223,4 +223,4 @@ Note: The empty tweets array gets populated on-demand in the client when user cl
 
 ## Usage
 
-You will need access to the hands-on lab exercises to make it work.
+Refer to [this doc](https://github.com/aerospike-edu/tweetaspike-workshop/blob/master/Hands-On%20Lab%20Exercises.docx)
